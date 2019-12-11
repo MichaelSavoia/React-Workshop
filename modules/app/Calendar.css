@@ -5,7 +5,15 @@
 .calendar-animation-overflow {
   overflow: hidden;
   position: relative;
-  height: calc(25rem + 12px);
+  height: calc(28rem + 12px);
+  padding: 0.25rem;
+}
+
+.calendar-animation-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0.5rem;
 }
 
 .calendar-week {
@@ -31,14 +39,45 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  background: var(--white);
   margin: 0.25rem;
   height: 5rem;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+.day:not(.day-is-future):hover {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: var(--box-shadow-md);
+}
+
+.day .calendar-add-post-button {
   box-shadow: var(--box-shadow-sm);
 }
 
-.day-no-minutes {
-  background: var(--gray100);
+.day-no-minutes .calendar-add-post-button {
+  background: var(--indigo50);
+}
+
+.day .day-link {
+  background: var(--white);
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--box-shadow-sm);
+}
+
+.day-has-minutes .day-link {
+  background: var(--white);
+  border-radius: 0.4rem;
+  color: var(--gray700);
+  font-size: 1.75rem;
+}
+
+.day-has-minutes:hover .day-link {
+  color: var(--indigo700);
 }
 
 .day .day-date {
@@ -60,7 +99,7 @@
 
 .day .day-month {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0.5rem;
   color: var(--indigo700);
 }
@@ -93,5 +132,16 @@
 }
 
 .calendar-nav {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.calendar-nav .icon-button {
   font-size: 1rem;
+  color: var(--gray600);
+  transition: color 0.2s ease;
+}
+
+.calendar-nav .icon-button:hover {
+  color: var(--indigo700);
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const gray = '#ffffff';
 const red = '#f56565';
-const accent = '#c3dafe';
+const accent = '#a3bffa';
 const green = '#48bb78';
 
 console.log(gray);
@@ -20,8 +20,6 @@ export default function ProgressCircle({
   const expectedStrokeDashoffset =
     circumference - (expectedProgress / 100) * circumference;
   const deficit = progress < expectedProgress;
-
-  console.log('deficit: ', deficit);
 
   const progressBar = (
     <circle

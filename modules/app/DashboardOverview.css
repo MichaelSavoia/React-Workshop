@@ -24,10 +24,14 @@
 
 .dashboard-overview .overview-info .info-group .info-value {
   margin-left: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .dashboard-overview .overview-info .info-total .info-value {
+  color: var(--indigo500);
+}
+
+.dashboard-overview .overview-info .info-total .info-goal-achieved .info-value {
   color: var(--green500);
 }
 

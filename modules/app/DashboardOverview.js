@@ -25,7 +25,11 @@ function DashboardOverview({ user }) {
           <div className="info-header">Expected Minutes:</div>
           <div className="info-value">{expected}</div>
         </div>
-        <div className="info-group info-total">
+        <div
+          className={`info-group info-total${
+            total >= expected ? ' info-goal-achieved' : ''
+          }`}
+        >
           <div className="info-header">Total Minutes:</div>
           <div className="info-value">{total}</div>
         </div>
