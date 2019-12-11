@@ -1,0 +1,9 @@
+.user-feed > *:first-child {
+  border-top: none;
+}
+
+.user-feed {
+  background: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow-xl);
+}

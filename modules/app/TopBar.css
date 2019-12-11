@@ -1,0 +1,38 @@
+.top-bar {
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.top-bar .top-bar-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar .top-bar-inner .section {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar .top-bar-inner .section .feed {
+  margin-left: 0.5rem;
+}
+
+.top-bar .top-bar-inner .section:last-child {
+  margin-left: 0.5rem;
+}
+
+.top-bar .top-bar-inner .section .avatar {
+  margin-right: 0.5rem;
+  box-shadow: var(--box-shadow-sm);
+}
+
+.top-bar .top-bar-inner .section .logout {
+  font-size: 1.2rem;
+}
+
+.top-bar .top-bar-inner .section .logout {
+  margin-left: 1rem;
+}

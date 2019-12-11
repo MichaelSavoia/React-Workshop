@@ -1,0 +1,195 @@
+:root {
+  --max-width: 1000px;
+  --black: #000000;
+  --white: #ffffff;
+  --gray100: #f7fafc;
+  --gray200: #edf2f7;
+  --gray300: #e2e8f0;
+  --gray400: #cbd5e0;
+  --gray500: #a0aec0;
+  --gray600: #718096;
+  --gray700: #4a5568;
+  --gray800: #2d3748;
+  --gray900: #1a202c;
+  --indigo100: #ebf4ff;
+  --indigo200: #c3dafe;
+  --indigo300: #a3bffa;
+  --indigo400: #7f9cf5;
+  --indigo500: #667eea;
+  --indigo600: #5a67d8;
+  --indigo700: #4c51bf;
+  --indigo800: #434190;
+  --indigo900: #3c366b;
+  --green100: #f0fff4;
+  --green200: #c6f6d5;
+  --green300: #9ae6b4;
+  --green400: #68d391;
+  --green500: #48bb78;
+  --green600: #38a169;
+  --green700: #2f855a;
+  --green800: #276749;
+  --green900: #22543d;
+  --red100: #fff5f5;
+  --red200: #fed7d7;
+  --red300: #feb2b2;
+  --red400: #fc8181;
+  --red500: #f56565;
+  --red600: #e53e3e;
+  --red700: #c53030;
+  --red800: #9b2c2c;
+  --red900: #742a2a;
+  --box-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --box-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --box-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --box-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --box-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --box-shadow-focus: 0 0 0 3px rgba(102, 126, 234, 0.5);
+}
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'),
+    local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light'),
+    local('Roboto-Light'), local('DroidSans'), local('Tahoma');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: 'system';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--indigo100);
+  color: var(--gray900);
+}
+
+button {
+  background: none;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition-property: box-shadow, transform, background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+input {
+  transition: box-shadow 0.2s ease;
+}
+
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-focus) !important;
+}
+
+button.cta {
+  color: var(--white);
+  background: var(--indigo500);
+  box-shadow: 0 4px 6px -1px rgba(102, 126, 234, 0.3),
+    0 2px 4px -1px rgba(102, 126, 234, 0.1);
+  font-size: 1rem;
+  padding: 0.6rem 1.6rem;
+}
+
+button.cta:hover {
+  background: var(--indigo600);
+  box-shadow: 0 6px 10px -3px rgba(90, 103, 216, 0.4),
+    0 4px 6px -2px rgba(90, 103, 216, 0.1);
+  transform: translateY(-1px);
+}
+
+button.link {
+  color: var(--indigo700);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999999px;
+}
+
+button.link:hover {
+  background: var(--indigo200);
+}
+
+button.link:active {
+  background: var(--indigo300);
+}
+
+button.icon-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+button.icon-button span {
+  margin-left: 0.25rem;
+}
+
+a {
+  text-decoration: none;
+  transition-property: box-shadow, transform, background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+a.nav-link {
+  color: var(--gray700);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999999px;
+}
+
+a.nav-link.active {
+  color: var(--indigo700);
+}
+
+a.nav-link:hover {
+  color: var(--indigo700);
+  background: var(--indigo200);
+}
+
+a.nav-link:active {
+  background: var(--indigo200);
+}
+
+a.icon-link {
+  display: flex;
+  align-items: center;
+}
+
+a.icon-link.circle {
+  padding: 0.5rem;
+}
+
+a.icon-link span {
+  margin-left: 0.25rem;
+}
+
+.avatar {
+  border-radius: 99999px;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-image {
+  position: absolute;
+  box-shadow: var(--box-shadow-inner);
+  background-position: center;
+  background-size: cover;
+  border-radius: 99999px;
+}

@@ -1,0 +1,36 @@
+.dashboard-overview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.dashboard-overview .overview-info {
+  margin-left: 3rem;
+  font-size: 1.5rem;
+  color: var(--gray600);
+  line-height: 1.375;
+}
+
+.dashboard-overview .avatar {
+  box-shadow: var(--box-shadow-md);
+}
+
+.dashboard-overview .overview-info .info-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.dashboard-overview .overview-info .info-group .info-value {
+  margin-left: 1rem;
+  font-weight: 700;
+}
+
+.dashboard-overview .overview-info .info-total .info-value {
+  color: var(--green500);
+}
+
+.dashboard-overview .overview-info .info-deficit .info-value {
+  color: var(--red500);
+}

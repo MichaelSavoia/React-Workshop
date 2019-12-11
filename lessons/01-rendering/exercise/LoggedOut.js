@@ -1,0 +1,11 @@
+import React from 'react';
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@reach/tabs';
+
+import LoginForm from 'app/LoginForm';
+import SignupForm from './SignupForm';
+import LoggedOut from './LoggedOut.final';
+export default LoggedOut;
+
+// export default function LoggedOut() {
+//   return <div className="logged-out">sup{/* Your work here */}</div>;
+// }

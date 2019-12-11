@@ -1,0 +1,7 @@
+.main {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}

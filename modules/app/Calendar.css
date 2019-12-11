@@ -1,0 +1,97 @@
+.calendar {
+  padding: 2rem 0;
+}
+
+.calendar-animation-overflow {
+  overflow: hidden;
+  position: relative;
+  height: calc(25rem + 12px);
+}
+
+.calendar-week {
+  display: flex;
+}
+
+.weekdays {
+  display: flex;
+  flex: 1;
+  margin: 0.25rem;
+}
+
+.weekdays > div {
+  text-transform: uppercase;
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  color: var(--gray600);
+}
+
+.day {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: var(--white);
+  margin: 0.25rem;
+  height: 5rem;
+  box-shadow: var(--box-shadow-sm);
+}
+
+.day-no-minutes {
+  background: var(--gray100);
+}
+
+.day .day-date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  font-size: 0.825rem;
+}
+
+.day .day-number {
+  flex: 1;
+  text-align: right;
+  margin: 0 0.5rem;
+}
+
+.day .day-month {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0.5rem;
+  color: var(--indigo700);
+}
+
+.day-minutes {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-minutes .calendar-add-post-button {
+  font-size: 1.25rem;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray600);
+  transition: all 0.2s ease;
+}
+
+.day-minutes .calendar-add-post-button:hover {
+  color: var(--indigo700) !important;
+  background: var(--white);
+}
+
+.day-minutes .calendar-add-post-button:active {
+  background: var(--gray100);
+}
+
+.calendar-nav {
+  font-size: 1rem;
+}

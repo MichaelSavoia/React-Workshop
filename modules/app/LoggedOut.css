@@ -1,0 +1,75 @@
+.logged-out {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.logged-out input[type='text'],
+.logged-out input[type='email'],
+.logged-out input[type='password'] {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--gray400);
+  border-radius: 0.3rem;
+  color: var(--gray700);
+}
+
+.logged-out input[type='text']::placeholder,
+.logged-out input[type='email']::placeholder,
+.logged-out input[type='password']::placeholder {
+  color: var(--gray500);
+}
+
+.logged-out [data-reach-tabs] {
+  width: 30rem;
+  border-radius: 0.4rem;
+  margin: 0 1rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow-lg);
+  overflow: hidden;
+}
+
+.logged-out [data-reach-tab-list] {
+  justify-content: space-around;
+}
+
+.logged-out [data-reach-tab] {
+  padding: 1rem 1.5rem;
+  border-radius: 0;
+  border: none;
+  flex: 1;
+  text-align: center;
+}
+
+.logged-out [data-reach-tab][aria-selected='false'] {
+  background: var(--gray200);
+  transition: background 0.2s ease;
+}
+
+.logged-out [data-reach-tab][aria-selected='false']:hover {
+  background: var(--gray300);
+}
+
+.logged-out [data-reach-tab][aria-selected='false'][tabindex='-1'] {
+  box-shadow: inset 2px -2px 3px -3px rgba(0, 0, 0, 0.06);
+}
+
+.logged-out [data-reach-tab][aria-selected='false'][tabindex='0'] {
+  box-shadow: inset -2px 2px 3px -3px rgba(0, 0, 0, 0.06);
+}
+
+.logged-out [data-reach-tab][aria-selected='true'],
+.logged-out [data-reach-tab].active {
+  background: var(--white);
+}
+
+.logged-out [data-reach-tab-panel] {
+  padding: 1.5rem 2.5rem;
+}
+
+.logged-out .tabs-button {
+  margin: 0 auto;
+}
