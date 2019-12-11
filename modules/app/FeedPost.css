@@ -1,4 +1,65 @@
 .feed-post {
   border-top: 1px solid var(--gray400);
   padding: 2rem;
+  display: flex;
+  font-size: 1.25rem;
+}
+
+.feed-post:hover {
+  background: var(--indigo50);
+  cursor: pointer;
+}
+
+.feed-post:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-focus);
+}
+
+.feed-post .avatar {
+  margin-right: 2rem;
+}
+
+.feed-post a {
+  color: var(--gray700);
+  display: block;
+}
+
+.feed-post a:hover {
+  text-decoration: underline;
+}
+
+.feed-post-minutes {
+  font-size: 2rem;
+  color: var(--indigo600);
+}
+
+.feed-post-date {
+  font-size: 1.25;
+  margin-top: 0.5rem;
+}
+
+.feed-post-user-label {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: var(--gray600);
+}
+
+.feed-post-user-name a {
+  display: inline;
+  font-size: 1.125rem;
+}
+
+.feed-post-created-at {
+  color: var(--gray600);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.feed-post-created-at a {
+  display: inline;
+}
+
+.feed-post-message {
+  margin-top: 0.75rem;
+  color: var(--gray700);
 }

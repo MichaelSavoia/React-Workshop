@@ -96,6 +96,11 @@ a:focus {
   box-shadow: var(--box-shadow-focus) !important;
 }
 
+button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
 button.cta {
   color: var(--white);
   background: var(--indigo500);
@@ -112,13 +117,18 @@ button.cta:hover {
   transform: translateY(-1px);
 }
 
+button.cta:disabled:hover {
+  transform: none;
+}
+
 button.link {
-  color: var(--indigo700);
+  color: var(--gray600);
   padding: 0.5rem 0.75rem;
   border-radius: 999999px;
 }
 
 button.link:hover {
+  color: var(--indigo700);
   background: var(--indigo200);
 }
 

@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import VisuallyHidden from '@reach/visually-hidden';
 import { FiZap } from 'react-icons/fi';
-import { parseISO, format } from 'date-fns';
+import { parseISO } from 'date-fns';
 
 import { signup } from 'app/utils';
 import TabsButton from 'app/TabsButton';
@@ -21,11 +21,9 @@ function TextInput({ id, label, type = 'text' }) {
 export default function SignupForm() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [startDate, setStartDate] = useState(new Date(Date.now()));
+  const [startDate, setStartDate] = useState('2019-09-01');
 
-  console.log(format(startDate, 'yyyy'));
-
-  console.log(startDate);
+  const parsedStartDate = parseISO(startDate);
 
   const handleSignup = async event => {
     event.preventDefault();
@@ -37,7 +35,7 @@ export default function SignupForm() {
         email: email.value,
         password: password.value,
         photoURL: photoURL.value,
-        startDate
+        startDate: parsedStartDate
       });
     } catch (error) {
       setLoading(false);
@@ -63,7 +61,7 @@ export default function SignupForm() {
         <TextInput id="password" type="password" label="Password" />
         <p>
           <span aria-hidden="true">Start:</span>{' '}
-          <DateFields value={startDate} onChange={setStartDate}>
+          <DateFields value={parsedStartDate} onChange={setStartDate}>
             <MonthField aria-label="Start Month" /> /{' '}
             <DayField aria-label="Start Day" /> /{' '}
             <YearField start={2018} end={2019} aria-label="Start year" />

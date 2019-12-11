@@ -1,0 +1,96 @@
+.user-posts-dialog [data-reach-dialog-content] {
+  padding: 0;
+}
+
+.posts {
+  display: flex;
+  margin: 1rem auto;
+  padding: 2rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow-xl);
+  border-radius: 0.4rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font: inherit;
+}
+
+.posts .avatar {
+  margin-right: 2rem;
+  box-shadow: var(--box-shadow-md);
+}
+
+.posts .posts-content {
+  flex: 1;
+}
+
+.posts-user-name {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.posts-user-name a {
+  color: var(--indigo500);
+}
+
+.posts-user-name a:hover {
+  color: var(--indigo700);
+}
+
+.posts-date {
+  font-size: 1.75rem;
+  color: var(--gray700);
+  margin-bottom: 1rem;
+}
+
+.post,
+.posts-add,
+.posts-adding {
+  border-top: 2px solid var(--gray300);
+}
+
+.posts-add,
+.posts-adding {
+  padding-top: 2rem;
+}
+
+.post {
+  padding: 2rem 0;
+}
+
+.post-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-minutes {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-message {
+  font-size: 1.25rem;
+  color: var(--gray600);
+}
+
+.post-delete-button {
+  font-size: 1.5rem;
+}
+
+.post-delete-button.link:hover {
+  color: var(--red700);
+  background: var(--red200);
+}
+
+.post-delete-button.link:active {
+  color: var(--red700);
+  background: var(--red300);
+}
+
+.posts-add-button {
+  font-size: 1.25rem;
+}

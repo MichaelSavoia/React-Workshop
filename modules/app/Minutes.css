@@ -1,0 +1,40 @@
+.minutes {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.minutes-label {
+  color: var(--gray800);
+  font-size: 1.25rem;
+}
+
+.minutes-input {
+  border: none;
+  outline: none;
+  background: var(--indigo50);
+  color: var(--gray800);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  width: 5rem;
+  box-shadow: var(--box-shadow-inner);
+}
+
+.minutes-input:focus {
+  outline: none;
+  box-shadow: var(--box-shadow-focus);
+}
+
+.minutes .icon-button {
+  font-size: 1.25rem;
+}
+
+.minutes .icon-button:first-child {
+  margin-right: 0.5rem;
+}
+
+.minutes .icon-button:last-child {
+  margin-left: 0.5rem;
+}

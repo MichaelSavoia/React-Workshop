@@ -1,0 +1,17 @@
+[data-reach-dialog-overlay] {
+  background: none;
+}
+
+[data-reach-dialog-content] {
+  box-shadow: var(--box-shadow-lg);
+  border-radius: 0.4rem;
+  max-width: 50rem;
+  width: 100%;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  font-size: 1rem;
+}

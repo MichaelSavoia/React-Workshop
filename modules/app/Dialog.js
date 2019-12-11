@@ -43,6 +43,7 @@ export default function Dialog(props) {
         <animated.DialogOverlay
           key={key}
           style={{ opacity }}
+          className={item.className}
           onDismiss={item.onDismiss}
         >
           <animated.DialogContent

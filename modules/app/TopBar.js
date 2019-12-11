@@ -8,7 +8,6 @@ import GlobalNav from 'app/GlobalNav';
 import Avatar from 'app/Avatar';
 
 function Account({ user }) {
-  console.log('user: ', user);
   return (
     <div className="section">
       <Avatar uid={user.uid} size={50} />

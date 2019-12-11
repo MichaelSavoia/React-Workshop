@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
 import { FiChevronDown, FiChevronUp, FiPlus } from 'react-icons/fi';
@@ -27,7 +27,7 @@ function Calendar({ user, posts }) {
   const today = formatDate(new Date(), DATE_FORMAT);
 
   const location = useLocation();
-  const { push, replace } = useHistory();
+  const { replace } = useHistory();
 
   const startDate =
     location.state && location.state.startDate
@@ -75,10 +75,6 @@ function Calendar({ user, posts }) {
     setDayWithNewPost(formatDate(newPostDate, DATE_FORMAT));
     closeDialog();
   };
-
-  const handleAnimationRest = useCallback(() => {
-    setDayWithNewPost(null);
-  }, [setDayWithNewPost]);
 
   if (!auth) return null;
 
@@ -169,20 +165,10 @@ function Weekdays() {
   );
 }
 
-function Day({
-  user,
-  day,
-  showMonth,
-  isOwner,
-  onNewPost,
-  hasNewPost,
-  modalIsOpen,
-  onAnimatedTextRest
-}) {
+function Day({ user, day, showMonth, isOwner, onNewPost }) {
   const dayIsToday = isToday(day.date);
   const dayIsFuture = isFuture(day.date);
   const totalMinutes = calculateTotalMinutes(day.posts);
-  const animateMinutes = hasNewPost && !modalIsOpen;
   const location = useLocation();
 
   return (
@@ -204,10 +190,12 @@ function Day({
         {totalMinutes ? (
           <Link
             className="day-link"
-            to={`/${user.uid}/${formatDate(day.date, DATE_FORMAT)}`}
-            state={{
-              fromCalendar: true,
-              ...location.state
+            to={{
+              pathname: `/${user.uid}/${formatDate(day.date, DATE_FORMAT)}`,
+              state: {
+                ...location.state,
+                fromCalendar: true
+              }
             }}
           >
             <span className="calendar-minutes-text">{totalMinutes}</span>

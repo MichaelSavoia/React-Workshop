@@ -15,9 +15,6 @@ function Avatar({ uid, size, bg }) {
   }
 
   const { goal, photoURL } = user;
-
-  console.log('posts: ', posts);
-
   const minutes = calculateTotalMinutes(posts);
   const expectedMinutes = calculateExpectedMinutes(user);
 
@@ -26,11 +23,8 @@ function Avatar({ uid, size, bg }) {
   const progress = (minutes / goal) * 100;
   const expectedProgress = (expectedMinutes / goal) * 100;
 
-  console.log('progress: ', progress);
-  console.log('expectedProgress: ', expectedProgress);
-
   return (
-    <div className="avatar" style={{ height: size }}>
+    <div className="avatar" style={{ height: size, width: size }}>
       <div
         role="img"
         className="avatar-image"

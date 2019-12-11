@@ -3,7 +3,22 @@
 }
 
 .user-feed {
+  margin-top: 2rem;
   background: var(--white);
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   box-shadow: var(--box-shadow-xl);
+}
+
+.user-feed .avatar {
+  box-shadow: var(--box-shadow-md);
+}
+
+.user-feed .feed-button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.user-feed .feed-new-posts-button {
+  font-size: 1.25rem;
 }

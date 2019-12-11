@@ -5,8 +5,6 @@ const red = '#f56565';
 const accent = '#a3bffa';
 const green = '#48bb78';
 
-console.log(gray);
-
 export default function ProgressCircle({
   radius = 30,
   stroke = 10,

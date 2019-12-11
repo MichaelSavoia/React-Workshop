@@ -13,6 +13,10 @@ import 'app/Feed.css';
 import 'app/FeedPost.css';
 import 'app/DashboardOverview.css';
 import 'app/Calendar.css';
+import 'app/Dialog.css';
+import 'app/NewPost.css';
+import 'app/Minutes.css';
+import 'app/Posts.css';
 
 function App() {
   const { authAttempted, auth } = useAuth();
