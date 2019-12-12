@@ -16,6 +16,7 @@ function DashboardOverview({ user }) {
   const total = calculateTotalMinutes(posts);
   const expected = calculateExpectedMinutes(user);
   const deficit = expected - total;
+  const makeup = calculateMakeup(total, expected, user.goal);
 
   return (
     <div className="dashboard-overview">
@@ -35,13 +36,11 @@ function DashboardOverview({ user }) {
         </div>
         <div className="info-group info-deficit">
           <div className="info-header">Minutes Short:</div>
-          <div className="info-value">{deficit}</div>
+          <div className="info-value">{deficit > 0 ? deficit : 0}</div>
         </div>
         <div className="info-group info-makeup">
           <div className="info-header">Makeup Workouts:</div>
-          <div className="info-value">
-            {calculateMakeup(total, expected, user.goal)}
-          </div>
+          <div className="info-value">{makeup > 0 ? makeup : 0}</div>
         </div>
       </div>
     </div>

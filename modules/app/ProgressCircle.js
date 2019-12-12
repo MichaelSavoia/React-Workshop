@@ -19,6 +19,8 @@ export default function ProgressCircle({
     circumference - (expectedProgress / 100) * circumference;
   const deficit = progress < expectedProgress;
 
+  console.log('deficit: ', deficit);
+
   const progressBar = (
     <circle
       key="progress"
