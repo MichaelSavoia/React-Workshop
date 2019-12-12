@@ -4,8 +4,8 @@ import { FiChevronDown } from 'react-icons/fi';
 
 import usePosts from 'app/usePosts';
 
-// import RecentPostsDropdown from "./RecentPostsDropdown.final"
-// export default RecentPostsDropdown
+// import RecentPostsDropdownFinal from './RecentPostsDropdown.final';
+// export default RecentPostsDropdownFinal;
 
 function RecentPostsDropdown({ uid, onSelect }) {
   const posts = usePosts(uid);

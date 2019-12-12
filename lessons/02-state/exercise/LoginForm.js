@@ -4,8 +4,8 @@ import { FiLogIn } from 'react-icons/fi';
 import TabsButton from 'app/TabsButton';
 import { login } from 'app/utils';
 
-// import LoginFormFinal from './LoginForm.final'
-// export default LoginFormFinal
+// import LoginFormFinal from './LoginForm.final';
+// export default LoginFormFinal;
 
 function LoginForm() {
   return (

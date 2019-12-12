@@ -98,7 +98,6 @@ export default function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
 }
 
 function makeNewPostKey(date) {
-  console.log(date);
   return `newPost:${formatDate(date, DATE_FORMAT)}`;
 }
 

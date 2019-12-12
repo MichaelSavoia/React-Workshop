@@ -8,12 +8,12 @@ import Avatar from 'app/Avatar';
 import Minutes from 'app/Minutes';
 import RecentPostsDropdown from 'app/RecentPostsDropdown';
 
-// import LoginFormFinal from './LoginForm.final'
-// export default LoginFormFinal
+import NewPostFinal from './NewPost.final';
+export default NewPostFinal;
 
 const MAX_MESSAGE_LENGTH = 200;
 
-export default function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
+function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
   const [{ auth }] = useAppState();
   const [message, setMessage] = useState('Ran around the track');
 
@@ -71,3 +71,5 @@ function getLocalStorageValue(key) {
 function setLocalStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
+
+// export default NewPost;

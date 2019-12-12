@@ -6,8 +6,9 @@ import Dashboard from 'app/Dashboard';
 import Feed from 'app/Feed';
 import User from 'app/User';
 
-import { useAppState } from 'app/app-state';
-import { fetchDoc, isValidDate } from 'app/utils';
+import { useAppState, AppStateProvider } from 'app/app-state';
+import appReducer, { initialState } from 'app/appReducer';
+import { fetchDoc } from 'app/utils';
 import UserDatePosts from 'app/UserDatePosts';
 
 function LoggedIn() {
@@ -35,7 +36,6 @@ function LoggedIn() {
           </Route>
           <Route
             path="/:uid/:date"
-            validate={hasValidDateParam}
             render={({ location }) => {
               if (location.state && location.state.fromCalendar) {
                 return <Dashboard />;
@@ -56,14 +56,13 @@ function LoggedIn() {
   ) : null;
 }
 
-const hasValidDateParam = ({ params }) => {
-  const [year, month, day] = params.date.split('-');
-  const isValid = isValidDate(
-    parseInt(year, 10),
-    parseInt(month, 10) - 1,
-    parseInt(day, 10)
+export default function({ auth }) {
+  return (
+    <AppStateProvider
+      reducer={appReducer}
+      initialState={{ ...initialState, auth }}
+    >
+      <LoggedIn />
+    </AppStateProvider>
   );
-  return isValid;
-};
-
-export default LoggedIn;
+}

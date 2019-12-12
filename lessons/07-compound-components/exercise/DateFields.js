@@ -1,9 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { daysInMonth } from 'app/utils';
 
-// import DateFieldsFinal from './DateFields.final';
-// export default DateFieldsFinal;
-
 const Context = createContext();
 
 export function DateFields({

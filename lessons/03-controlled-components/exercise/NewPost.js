@@ -13,7 +13,7 @@ const errorClass = 'new-post-error';
 
 const MAX_MESSAGE_LENGTH = 200;
 
-export default function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
+function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
   const [{ auth }] = useAppState();
 
   return (
@@ -38,3 +38,5 @@ export default function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
     </div>
   );
 }
+
+export default NewPost;

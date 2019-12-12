@@ -12,7 +12,7 @@ const MAX_MESSAGE_LENGTH = 200;
 
 function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
   const [{ auth }] = useAppState();
-  const [message, setMessage] = useState('Ran around the lake.');
+  const [message, setMessage] = useState('Ran around the track.');
   const messageTooLong = message.length > MAX_MESSAGE_LENGTH;
 
   const handleMessageChange = event => {

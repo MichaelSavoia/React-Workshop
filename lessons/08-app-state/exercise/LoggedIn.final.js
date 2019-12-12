@@ -7,8 +7,11 @@ import Feed from 'app/Feed';
 import User from 'app/User';
 
 import { useAppState } from 'app/app-state';
-import { fetchUser } from 'app/utils';
+import { fetchDoc } from 'app/utils';
 import UserDatePosts from 'app/UserDatePosts';
+
+// import LoggedInFinal from './LoggedIn.final';
+// export default LoggedInFinal;
 
 function LoggedIn() {
   const [{ auth, user }, dispatch] = useAppState();
@@ -16,7 +19,7 @@ function LoggedIn() {
   useEffect(() => {
     if (!user) {
       let isCurrent = true;
-      fetchUser(auth.uid).then(user => {
+      fetchDoc(`users/${auth.uid}`).then(user => {
         if (isCurrent) {
           dispatch({ type: 'LOAD_USER', user });
         }
@@ -55,4 +58,4 @@ function LoggedIn() {
   ) : null;
 }
 
-export default LoggedIn;
+// export default LoggedIn;

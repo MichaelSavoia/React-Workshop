@@ -10,7 +10,7 @@ import { DateFields, MonthField, DayField, YearField } from 'app/DateFields';
 // import SignupFormFinal from './SignupForm.final';
 // export default SignupFormFinal;
 
-export default function SignupForm() {
+function SignupForm() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [startDate, setStartDate] = useState('2019-09-01');
@@ -68,3 +68,5 @@ export default function SignupForm() {
     </div>
   );
 }
+
+export default SignupForm;

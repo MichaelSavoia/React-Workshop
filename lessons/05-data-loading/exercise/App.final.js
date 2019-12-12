@@ -24,6 +24,7 @@ export default function App() {
   if (!authAttempted) {
     return <p>Authenticating...</p>;
   }
+  // return null;
 
   return (
     <div className="layout">

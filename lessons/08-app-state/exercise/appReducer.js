@@ -1,6 +1,3 @@
-// import appReducerFinal from './appReducer.final'
-// export default appReducerFinal;
-
 const initialState = { authAttempted: false, auth: null, user: null };
 
 const appStateReducer = (state, action) => {

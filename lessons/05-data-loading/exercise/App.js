@@ -7,7 +7,7 @@ import LoggedOut from 'app/LoggedOut';
 // import AppFinal from './App.final';
 // export default AppFinal;
 
-export default function App() {
+function App() {
   const auth = null;
   const authAttempted = false;
 
@@ -21,3 +21,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
