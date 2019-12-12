@@ -4,9 +4,9 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@reach/tabs';
 import LoginForm from 'app/LoginForm';
 import SignupForm from 'app/SignupForm';
 import About from 'app/About';
-import LoggedOut from './LoggedOut.final';
-export default LoggedOut;
+// import LoggedOut from './LoggedOut.final';
+// export default LoggedOut;
 
-// export default function LoggedOut() {
-//   return <div className="logged-out">sup{/* Your work here */}</div>;
-// }
+export default function LoggedOut() {
+  return <div className="logged-out">{/* Your work here */}</div>;
+}
