@@ -6,6 +6,7 @@ import { useAppState } from 'app/app-state';
 import { createPost, DATE_FORMAT } from 'app/utils';
 import Avatar from 'app/Avatar';
 import Minutes from 'app/Minutes';
+import RecentPostsDropdown from 'app/RecentPostsDropdown';
 
 const MAX_MESSAGE_LENGTH = 200;
 
@@ -59,6 +60,10 @@ export default function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
     setMessage(event.target.value);
   }
 
+  const handleRecentSelect = text => {
+    setMessage(text);
+  };
+
   return (
     <div className={'new-post' + (messageTooLong ? ' new-post-error' : '')}>
       {showAvatar && <Avatar uid={auth.uid} size={70} bg="#ebf4ff" />}
@@ -73,12 +78,13 @@ export default function NewPost({ takeFocus, date, onSuccess, showAvatar }) {
         <div className="new-post-char-count">
           {message.length}/{MAX_MESSAGE_LENGTH}
         </div>
+        <RecentPostsDropdown uid={auth.uid} onSelect={handleRecentSelect} />
         <div className="new-post-buttons">
           <Minutes date={date} />
           <div>
             <button
               type="submit"
-              disabled={isSaving}
+              disabled={isSaving || messageTooLong}
               className="icon-button cta"
             >
               <FiZap /> <span>Post</span>

@@ -118,6 +118,9 @@ button.cta:hover {
 }
 
 button.cta:disabled:hover {
+  background: var(--indigo500);
+  box-shadow: 0 4px 6px -1px rgba(102, 126, 234, 0.3),
+    0 2px 4px -1px rgba(102, 126, 234, 0.1);
   transform: none;
 }
 

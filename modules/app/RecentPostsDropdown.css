@@ -1,0 +1,24 @@
+.recent-posts-dropdown-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1rem;
+  color: var(--gray600);
+}
+
+.recent-posts-dropdown-button:hover {
+  color: var(--indigo800);
+  background: var(--indigo200);
+}
+
+[data-reach-menu-list] {
+  box-shadow: var(--box-shadow-md);
+  border: none;
+  border-radius: 0.4rem;
+  color: var(--gray800);
+}
+
+[data-reach-menu-item][data-selected] {
+  background: var(--indigo100);
+  color: var(--gray800);
+}

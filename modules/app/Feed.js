@@ -33,7 +33,7 @@ export default function Feed() {
     feedState || {
       createdBefore: Date.now(),
       viewedAll: false,
-      limit: PER_PAGE + 1,
+      limit: PER_PAGE,
       posts: null,
       newPosts: []
     }

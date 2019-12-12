@@ -3,10 +3,12 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@reach/tabs';
 
 import LoginForm from 'app/LoginForm';
 import SignupForm from 'app/SignupForm';
+import About from 'app/About';
 
 function LoggedOut() {
   return (
     <div className="logged-out">
+      <About />
       <Tabs>
         <TabList>
           <Tab>Login</Tab>

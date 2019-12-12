@@ -8,6 +8,10 @@
   flex: 1;
 }
 
+.new-post-error .new-post-input {
+  background: var(--red200);
+}
+
 .new-post-input {
   display: block;
   width: 100%;
@@ -20,6 +24,7 @@
   height: 7rem;
   border-radius: 0.4rem;
   box-shadow: var(--box-shadow-inner);
+  transition: background 0.2s ease;
 }
 
 .new-post-input:focus {
